@@ -56,7 +56,7 @@ Linux
 
 我的电脑——右键“属性”——“高级系统设置”——“环境变量”——“系统变量”
 
-​	假设GO安装于C盘根目录
+	假设GO安装于C盘根目录
 
 **新建：**
 
@@ -156,21 +156,19 @@ ruby@ubuntu:~$ sudo apt-get install vim
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-
-
 配置gopath，就是存储go源文件的位置。
 
-​	对于Ubuntu系统，默认使用Home/go目录作为gopath。
-
-​		该目录下有3个子目录：src，pkg，bin
+	对于Ubuntu系统，默认使用Home/go目录作为gopath。
+	
+		该目录下有3个子目录：src，pkg，bin
 
 > GO代码必须在工作空间内。工作空间是一个目录，其中包含三个子目录：
 >
-> ​	src ---- 里面每一个子目录，就是一个包。包内是Go的源码文件
->
-> ​	pkg ---- 编译后生成的，包的目标文件
->
-> ​	bin ---- 生成的可执行文件。
+> 	src ---- 里面每一个子目录，就是一个包。包内是Go的源码文件
+>		
+> 	pkg ---- 编译后生成的，包的目标文件
+>		
+> 	bin ---- 生成的可执行文件。
 
 ```shell
 export GOPATH=$HOME/go
@@ -184,11 +182,11 @@ export GOPATH=$HOME/go
 >
 > 3. 输入i，切片到编辑模式，将以上内容复制到文件中，并保存退出。
 >
->    ​	点击esc键后，
+>    	点击esc键后，
 >
->    ​	:q!，强制退出不保存
+>    	:q!，强制退出不保存
 >
->    ​	:wq，保存并退出	
+>    	:wq，保存并退出	
 
 
 
@@ -321,10 +319,6 @@ sudo apt-get remove sublime-text-installer
 3、解决中文不能输入的问题
 ```
 
-
-
-
-
 # 三、第一个程序：HelloWorld
 
 ### 3.1 编写第一个程序
@@ -347,22 +341,22 @@ func main() {
 
 方式一：使用go run命令
 
-​	step1：打开终端：
-
-​			window下使用快捷键win+R，输入cmd打开命令行提示符
-
-​			linux下可以使用快捷键：ctrl+alt+T
-
-​	step2：进入helloworld.go所在的目录
-
-​	step3：输入go run helloworld.go命令并观察运行结果。
+	step1：打开终端：
+	
+			window下使用快捷键win+R，输入cmd打开命令行提示符
+	
+			linux下可以使用快捷键：ctrl+alt+T
+	
+	step2：进入helloworld.go所在的目录
+	
+	step3：输入go run helloworld.go命令并观察运行结果。
 
 方式二：使用go build命令
 
-​	step1：打开终端：在任意文件路径下，运行:
+	step1：打开终端：在任意文件路径下，运行:
 			go install hello 
-
-​		也可以进入项目(应用包)的路径，然后运行：
+	
+		也可以进入项目(应用包)的路径，然后运行：
 			go install 
 
 注意，在编译生成go程序的时，go实际上会去两个地方找程序包：
@@ -370,9 +364,10 @@ GOROOT下的src文件夹下，以及GOPATH下的src文件夹下。
 
 在程序包里，自动找main包的main函数作为程序入口，然后进行编译。
 
-​	step2：运行go程序
+	step2：运行go程序
 		在/home/go/bin/下(如果之前没有bin目录则会自动创建)，会发现出现了一个hello的可执行文件，用如下命令运行:
 		./hello
+
 
 ​	
 
@@ -429,8 +424,6 @@ import "fmt" 告诉 Go 编译器这个程序需要使用 fmt 包的函数，fmt 
 #### 3.3.3 main
 
 main(),是程序运行的入口。
-
-
 
 # 四、编码规范
 
